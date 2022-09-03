@@ -28,12 +28,25 @@ class Issue extends CActiveRecord
 	const TYPE_FEATURE=1;
 	const TYPE_TASK=2;
 
+	const STATUS_NOTYETSTARTED=0;
+	const STATUS_STARTED=1;
+	const STATUS_FINISHED=2;
+
 	public function getTypeOptions()
 	{
 		return array(
 			self::TYPE_BUG=>'Bug',
 			self::TYPE_FEATURE=>'Feature',
 			self::TYPE_TASK=>'Task',
+		);
+	}
+
+	public function getStatusOptions()
+	{
+		return array(
+			self::STATUS_NOTYETSTARTED=>'Not Yet Started',
+			self::STATUS_STARTED=>'Started',
+			self::STATUS_FINISHED=>'Finished',
 		);
 	}
 
