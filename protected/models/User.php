@@ -1,25 +1,32 @@
 <?php
 
 /**
- * This is the model class for table "tbl_project".
+ * This is the model class for table "tbl_user".
  *
- * The followings are the available columns in table 'tbl_project':
+ * The followings are the available columns in table 'tbl_user':
  * @property integer $id
- * @property string $name
- * @property string $description
+ * @property string $username
+ * @property string $email
+ * @property string $password
+ * @property string $last_login_time
  * @property string $create_time
  * @property integer $create_user_id
  * @property string $update_time
  * @property integer $update_user_id
+ *
+ * The followings are the available model relations:
+ * @property TblIssue[] $tblIssues
+ * @property TblIssue[] $tblIssues1
+ * @property TblProject[] $tblProjects
  */
-class Project extends CActiveRecord
+class User extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'tbl_project';
+		return 'tbl_user';
 	}
 
 	/**
@@ -30,13 +37,13 @@ class Project extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, description', 'required'),
+			array('username, email, password', 'required'),
 			array('create_user_id, update_user_id', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>255),
-			array('create_time, update_time', 'safe'),
+			array('username, email, password', 'length', 'max'=>255),
+			array('last_login_time, create_time, update_time', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, description, create_time, create_user_id, update_time, update_user_id', 'safe', 'on'=>'search'),
+			array('id, username, email, password, last_login_time, create_time, create_user_id, update_time, update_user_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -48,17 +55,11 @@ class Project extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'issues'=>array(self::HAS_MANY, 'Issue', 'project_id'),
-			'users'=>array(self::MANY_MANY, 'User', 'tbl_project_user_assignment(project_id, user_id)'),
+			'tblIssues' => array(self::HAS_MANY, 'TblIssue', 'owner_id'),
+			'tblIssues1' => array(self::HAS_MANY, 'TblIssue', 'requester_id'),
+			'tblProjects' => array(self::MANY_MANY, 'TblProject', 'tbl_project_user_assignment(user_id, project_id)'),
 		);
 	}
-
-	public function getUserOptions()
-	{
-		$userArray=CHtml::listData($this->users, 'id', 'username');
-		return $userArray;
-	}
-
 
 	/**
 	 * @return array customized attribute labels (name=>label)
@@ -67,8 +68,10 @@ class Project extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'description' => 'Description',
+			'username' => 'Username',
+			'email' => 'Email',
+			'password' => 'Password',
+			'last_login_time' => 'Last Login Time',
 			'create_time' => 'Create Time',
 			'create_user_id' => 'Create User',
 			'update_time' => 'Update Time',
@@ -95,8 +98,10 @@ class Project extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('description',$this->description,true);
+		$criteria->compare('username',$this->username,true);
+		$criteria->compare('email',$this->email,true);
+		$criteria->compare('password',$this->password,true);
+		$criteria->compare('last_login_time',$this->last_login_time,true);
 		$criteria->compare('create_time',$this->create_time,true);
 		$criteria->compare('create_user_id',$this->create_user_id);
 		$criteria->compare('update_time',$this->update_time,true);
@@ -111,7 +116,7 @@ class Project extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Project the static model class
+	 * @return User the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

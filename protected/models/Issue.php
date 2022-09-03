@@ -50,6 +50,12 @@ class Issue extends CActiveRecord
 		);
 	}
 
+	public function getTypeText()
+	{
+		$typeOptions=$this->typeOptions;
+		return isset($typeOptions[$this->type_id])?$typeOptions[$this->type_id]:"Unknown type ({$this->type_id})";
+	}
+
 	public function getStatusOptions()
 	{
 		return array(
@@ -66,6 +72,12 @@ class Issue extends CActiveRecord
 			self::STATUS_STARTED,
 			self::STATUS_FINISHED,
 		);
+	}
+
+	public function getStatusText()
+	{
+		$statusOptions=$this->statusOptions;
+		return isset($statusOptions[$this->status_id])?$statusOptions[$this->status_id]:"Unknown type ({$this->status_id})";
 	}
 
 	/**
@@ -104,9 +116,9 @@ class Issue extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'owner' => array(self::BELONGS_TO, 'TblUser', 'owner_id'),
-			'project' => array(self::BELONGS_TO, 'TblProject', 'project_id'),
-			'requester' => array(self::BELONGS_TO, 'TblUser', 'requester_id'),
+			'owner' => array(self::BELONGS_TO, 'User', 'owner_id'),
+			'project' => array(self::BELONGS_TO, 'Project', 'project_id'),
+			'requester' => array(self::BELONGS_TO, 'User', 'requester_id'),
 		);
 	}
 
@@ -152,7 +164,8 @@ class Issue extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('description',$this->description,true);
-		$criteria->compare('project_id',$this->project_id);
+		$criteria->condition='project_id=:projectId';
+		$criteria->params=array(':projectId'=>$this->project_id);
 		$criteria->compare('type_id',$this->type_id);
 		$criteria->compare('status_id',$this->status_id);
 		$criteria->compare('owner_id',$this->owner_id);

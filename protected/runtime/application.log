@@ -192,3 +192,328 @@ Stack trace:
 #11 C:\xampp\htdocs\trackstar\protected\yiic.php(7): require_once('C:\\xampp\\htdocs...')
 #12 {main}
 ---
+2022/09/03 17:29:15 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\trackstar\framework\zii\widgets\CMenu.php:314)
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\framework\zii\widgets\CMenu.php(293): CMenu->isItemActive()
+#1 C:\xampp\htdocs\trackstar\framework\zii\widgets\CMenu.php(161): CMenu->normalizeItems()
+#2 C:\xampp\htdocs\trackstar\framework\web\CBaseController.php(147): CMenu->init()
+#3 C:\xampp\htdocs\trackstar\framework\web\CBaseController.php(181): ProjectController->createWidget()
+#4 C:\xampp\htdocs\trackstar\protected\views\layouts\column2.php(15): ProjectController->widget()
+#5 C:\xampp\htdocs\trackstar\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\trackstar\framework\web\CBaseController.php(95): ProjectController->renderInternal()
+#7 C:\xampp\htdocs\trackstar\framework\web\CController.php(787): ProjectController->renderFile()
+#8 C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php(55): ProjectController->render()
+#9 unknown(0): ProjectController->actionView()
+#10 C:\xampp\htdocs\trackstar\framework\web\actions\CAction.php(115): ReflectionMethod->invokeArgs()
+#11 C:\xampp\htdocs\trackstar\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 C:\xampp\htdocs\trackstar\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(134): ProjectController->runAction()
+#14 C:\xampp\htdocs\trackstar\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\trackstar\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#16 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): ProjectController->filterAccessControl()
+#17 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#18 C:\xampp\htdocs\trackstar\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\trackstar\framework\web\CController.php(265): ProjectController->runActionWithFilters()
+#20 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(282): ProjectController->run()
+#21 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\xampp\htdocs\trackstar\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\trackstar\index.php(13): CWebApplication->run()
+REQUEST_URI=/trackstar/index.php?r=project/view&id=1
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column2.php (15)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (55)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2022/09/03 17:30:22 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\trackstar\framework\zii\widgets\CMenu.php:314)
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\framework\zii\widgets\CMenu.php(293): CMenu->isItemActive()
+#1 C:\xampp\htdocs\trackstar\framework\zii\widgets\CMenu.php(161): CMenu->normalizeItems()
+#2 C:\xampp\htdocs\trackstar\framework\web\CBaseController.php(147): CMenu->init()
+#3 C:\xampp\htdocs\trackstar\framework\web\CBaseController.php(181): ProjectController->createWidget()
+#4 C:\xampp\htdocs\trackstar\protected\views\layouts\column2.php(15): ProjectController->widget()
+#5 C:\xampp\htdocs\trackstar\framework\web\CBaseController.php(126): require()
+#6 C:\xampp\htdocs\trackstar\framework\web\CBaseController.php(95): ProjectController->renderInternal()
+#7 C:\xampp\htdocs\trackstar\framework\web\CController.php(787): ProjectController->renderFile()
+#8 C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php(55): ProjectController->render()
+#9 unknown(0): ProjectController->actionView()
+#10 C:\xampp\htdocs\trackstar\framework\web\actions\CAction.php(115): ReflectionMethod->invokeArgs()
+#11 C:\xampp\htdocs\trackstar\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 C:\xampp\htdocs\trackstar\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(134): ProjectController->runAction()
+#14 C:\xampp\htdocs\trackstar\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\trackstar\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#16 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): ProjectController->filterAccessControl()
+#17 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#18 C:\xampp\htdocs\trackstar\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\trackstar\framework\web\CController.php(265): ProjectController->runActionWithFilters()
+#20 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(282): ProjectController->run()
+#21 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\xampp\htdocs\trackstar\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\trackstar\index.php(13): CWebApplication->run()
+REQUEST_URI=/trackstar/index.php?r=project/view&id=2
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column2.php (15)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (55)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2022/09/03 17:51:21 [error] [exception.CHttpException.403] CHttpException: Must specify a project before performing this action. in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:29
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\trackstar\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\trackstar\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\trackstar\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\trackstar\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(282): CController->run('create')
+#9 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/create')
+#10 C:\xampp\htdocs\trackstar\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/create
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue
+---
+2022/09/03 17:51:39 [error] [php] include(User.php): failed to open stream: No such file or directory (C:\xampp\htdocs\trackstar\framework\YiiBase.php:463)
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\framework\YiiBase.php(463): include()
+#1 unknown(0): autoload()
+#2 C:\xampp\htdocs\trackstar\framework\db\ar\CActiveRecord.php(397): spl_autoload_call()
+#3 C:\xampp\htdocs\trackstar\framework\db\ar\CActiveFinder.php(182): model()
+#4 C:\xampp\htdocs\trackstar\framework\db\ar\CActiveFinder.php(231): CActiveFinder->getModel()
+#5 C:\xampp\htdocs\trackstar\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree()
+#6 C:\xampp\htdocs\trackstar\framework\db\ar\CActiveRecord.php(915): CActiveFinder->__construct()
+#7 C:\xampp\htdocs\trackstar\framework\db\ar\CActiveRecord.php(282): Project->getActiveFinder()
+#8 C:\xampp\htdocs\trackstar\framework\db\ar\CActiveRecord.php(143): Project->getRelated()
+#9 C:\xampp\htdocs\trackstar\protected\models\Project.php(58): Project->__get()
+#10 C:\xampp\htdocs\trackstar\protected\views\issue\_form.php(48): Project->getUserOptions()
+#11 C:\xampp\htdocs\trackstar\framework\web\CBaseController.php(126): require()
+#12 C:\xampp\htdocs\trackstar\framework\web\CBaseController.php(95): IssueController->renderInternal()
+#13 C:\xampp\htdocs\trackstar\framework\web\CController.php(872): IssueController->renderFile()
+#14 C:\xampp\htdocs\trackstar\protected\views\issue\create.php(18): IssueController->renderPartial()
+#15 C:\xampp\htdocs\trackstar\framework\web\CBaseController.php(126): require()
+#16 C:\xampp\htdocs\trackstar\framework\web\CBaseController.php(95): IssueController->renderInternal()
+#17 C:\xampp\htdocs\trackstar\framework\web\CController.php(872): IssueController->renderFile()
+#18 C:\xampp\htdocs\trackstar\framework\web\CController.php(785): IssueController->renderPartial()
+#19 C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php(103): IssueController->render()
+#20 C:\xampp\htdocs\trackstar\framework\web\actions\CInlineAction.php(49): IssueController->actionCreate()
+#21 C:\xampp\htdocs\trackstar\framework\web\CController.php(308): CInlineAction->runWithParams()
+#22 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(134): IssueController->runAction()
+#23 C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php(31): CFilterChain->run()
+#24 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext()
+#25 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#26 C:\xampp\htdocs\trackstar\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#27 C:\xampp\htdocs\trackstar\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#28 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): IssueController->filterAccessControl()
+#29 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#30 C:\xampp\htdocs\trackstar\framework\web\CController.php(291): CFilterChain->run()
+#31 C:\xampp\htdocs\trackstar\framework\web\CController.php(265): IssueController->runActionWithFilters()
+#32 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(282): IssueController->run()
+#33 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#34 C:\xampp\htdocs\trackstar\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#35 C:\xampp\htdocs\trackstar\index.php(13): CWebApplication->run()
+REQUEST_URI=/trackstar/index.php?r=issue/create&pid=1
+in C:\xampp\htdocs\trackstar\protected\models\Project.php (58)
+in C:\xampp\htdocs\trackstar\protected\views\issue\_form.php (48)
+in C:\xampp\htdocs\trackstar\protected\views\issue\create.php (18)
+2022/09/03 18:05:12 [error] [exception.ParseError] ParseError: syntax error, unexpected end of file in C:\xampp\htdocs\trackstar\protected\views\project\view.php:40
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\trackstar\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\trackstar\framework\web\CController.php(785): CController->renderPartial('view', Array, true)
+#3 C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php(64): CController->render('view', Array)
+#4 [internal function]: ProjectController->actionView('1')
+#5 C:\xampp\htdocs\trackstar\framework\web\actions\CAction.php(115): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#6 C:\xampp\htdocs\trackstar\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProjectController), Object(ReflectionMethod), Array)
+#7 C:\xampp\htdocs\trackstar\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\trackstar\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\trackstar\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\trackstar\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\trackstar\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(282): CController->run('view')
+#16 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(141): CWebApplication->runController('project/view')
+#17 C:\xampp\htdocs\trackstar\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/trackstar/index.php?r=project/view&id=1
+HTTP_REFERER=http://localhost/trackstar/index.php?r=project
+---
+2022/09/03 18:46:23 [error] [exception.CHttpException.403] CHttpException: Must specify a project before performing this action. in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:29
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\trackstar\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\trackstar\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\trackstar\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\trackstar\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(282): CController->run('admin')
+#9 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/admin')
+#10 C:\xampp\htdocs\trackstar\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/admin
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/index&pid=1
+---
+2022/09/03 18:47:25 [error] [exception.CHttpException.403] CHttpException: Must specify a project before performing this action. in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:29
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\trackstar\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\trackstar\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\trackstar\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\trackstar\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(282): CController->run('admin')
+#9 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/admin')
+#10 C:\xampp\htdocs\trackstar\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/admin
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/index&pid=1
+---
+2022/09/03 18:47:26 [error] [exception.CHttpException.403] CHttpException: Must specify a project before performing this action. in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:29
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\trackstar\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\trackstar\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\trackstar\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\trackstar\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(282): CController->run('admin')
+#9 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/admin')
+#10 C:\xampp\htdocs\trackstar\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/admin
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/index&pid=1
+---
+2022/09/03 18:47:26 [error] [exception.CHttpException.403] CHttpException: Must specify a project before performing this action. in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:29
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\trackstar\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\trackstar\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\trackstar\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\trackstar\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(282): CController->run('admin')
+#9 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/admin')
+#10 C:\xampp\htdocs\trackstar\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/admin
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/index&pid=1
+---
+2022/09/03 18:47:26 [error] [exception.CHttpException.403] CHttpException: Must specify a project before performing this action. in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:29
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\trackstar\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\trackstar\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\trackstar\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\trackstar\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(282): CController->run('admin')
+#9 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/admin')
+#10 C:\xampp\htdocs\trackstar\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/admin
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/index&pid=1
+---
+2022/09/03 18:47:26 [error] [exception.CHttpException.403] CHttpException: Must specify a project before performing this action. in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:29
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\trackstar\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\trackstar\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\trackstar\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\trackstar\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(282): CController->run('admin')
+#9 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/admin')
+#10 C:\xampp\htdocs\trackstar\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/admin
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/index&pid=1
+---
+2022/09/03 18:47:26 [error] [exception.CHttpException.403] CHttpException: Must specify a project before performing this action. in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:29
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\trackstar\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\trackstar\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\trackstar\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\trackstar\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(282): CController->run('admin')
+#9 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/admin')
+#10 C:\xampp\htdocs\trackstar\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/admin
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/index&pid=1
+---
+2022/09/03 18:47:32 [error] [exception.CHttpException.403] CHttpException: Must specify a project before performing this action. in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:29
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\trackstar\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\trackstar\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\trackstar\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\trackstar\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(282): CController->run('admin')
+#9 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/admin')
+#10 C:\xampp\htdocs\trackstar\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/admin
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/index&pid=1
+---
+2022/09/03 18:47:46 [error] [exception.CHttpException.403] CHttpException: Must specify a project before performing this action. in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:29
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\trackstar\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\trackstar\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\trackstar\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\trackstar\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(282): CController->run('index')
+#9 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/index')
+#10 C:\xampp\htdocs\trackstar\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/index
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/admin&pid=1
+---
+2022/09/03 18:48:48 [error] [exception.CHttpException.403] CHttpException: Must specify a project before performing this action. in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:29
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\trackstar\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\trackstar\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\trackstar\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\trackstar\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\trackstar\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\trackstar\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(282): CController->run('create')
+#9 C:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/create')
+#10 C:\xampp\htdocs\trackstar\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/create
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/admin&pid=1
+---
