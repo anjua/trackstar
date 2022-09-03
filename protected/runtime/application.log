@@ -1,0 +1,56 @@
+2022/09/02 04:38:06 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'tracstar' in C:\xampp\htdocs\trackstar\framework\db\CDbConnection.php:399
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 C:\xampp\htdocs\trackstar\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\trackstar\framework\base\CModule.php(394): CDbConnection->init()
+#3 C:\xampp\htdocs\trackstar\framework\cli\commands\MigrateCommand.php(472): CModule->getComponent('db')
+#4 C:\xampp\htdocs\trackstar\framework\cli\commands\MigrateCommand.php(481): MigrateCommand->getDbConnection()
+#5 C:\xampp\htdocs\trackstar\framework\cli\commands\MigrateCommand.php(512): MigrateCommand->getMigrationHistory(-1)
+#6 C:\xampp\htdocs\trackstar\framework\cli\commands\MigrateCommand.php(84): MigrateCommand->getNewMigrations()
+#7 [internal function]: MigrateCommand->actionUp(Array)
+#8 C:\xampp\htdocs\trackstar\framework\console\CConsoleCommand.php(178): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#9 C:\xampp\htdocs\trackstar\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#10 C:\xampp\htdocs\trackstar\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 C:\xampp\htdocs\trackstar\framework\base\CApplication.php(185): CConsoleApplication->processRequest()
+#12 C:\xampp\htdocs\trackstar\framework\yiic.php(33): CApplication->run()
+#13 C:\xampp\htdocs\trackstar\protected\yiic.php(7): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+---
+2022/09/02 04:38:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trackstar.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2022/09/02 04:38:27 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NOT NULL,
+	`create_user_id` int(11) DEFAULT NOT NULL,
+	`update_time` datetime...' at line 5. The SQL statement executed was: CREATE TABLE `tbl_project` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255) NOT NULL,
+	`description` text NOT NULL,
+	`create_time` datetime DEFAULT NOT NULL,
+	`create_user_id` int(11) DEFAULT NOT NULL,
+	`update_time` datetime DEFAULT NOT NULL,
+	`update_user_id` int(11) DEFAULT NOT NULL
+) ENGINE=InnoDB.
+2022/09/02 04:38:27 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NOT NULL,
+	`create_user_id` int(11) DEFAULT NOT NULL,
+	`update_time` datetime...' at line 5. The SQL statement executed was: CREATE TABLE `tbl_project` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255) NOT NULL,
+	`description` text NOT NULL,
+	`create_time` datetime DEFAULT NOT NULL,
+	`create_user_id` int(11) DEFAULT NOT NULL,
+	`update_time` datetime DEFAULT NOT NULL,
+	`update_user_id` int(11) DEFAULT NOT NULL
+) ENGINE=InnoDB in C:\xampp\htdocs\trackstar\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\framework\db\CDbCommand.php(1352): CDbCommand->execute()
+#1 C:\xampp\htdocs\trackstar\framework\db\CDbMigration.php(250): CDbCommand->createTable('tbl_project', Array, 'ENGINE=InnoDB')
+#2 C:\xampp\htdocs\trackstar\protected\migrations\m220902_020509_create_project_table.php(15): CDbMigration->createTable('tbl_project', Array, 'ENGINE=InnoDB')
+#3 C:\xampp\htdocs\trackstar\framework\cli\commands\MigrateCommand.php(415): m220902_020509_create_project_table->up()
+#4 C:\xampp\htdocs\trackstar\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m220902_020509_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\xampp\htdocs\trackstar\framework\console\CConsoleCommand.php(178): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\xampp\htdocs\trackstar\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\xampp\htdocs\trackstar\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\xampp\htdocs\trackstar\framework\base\CApplication.php(185): CConsoleApplication->processRequest()
+#10 C:\xampp\htdocs\trackstar\framework\yiic.php(33): CApplication->run()
+#11 C:\xampp\htdocs\trackstar\protected\yiic.php(7): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+---
