@@ -19,7 +19,7 @@
  * @property TblIssue[] $tblIssues1
  * @property TblProject[] $tblProjects
  */
-class User extends CActiveRecord
+class User extends TrackStarActiveRecord
 {
 	/**
 	 * @return string the associated database table name
@@ -38,9 +38,8 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('username, email, password', 'required'),
-			array('create_user_id, update_user_id', 'numerical', 'integerOnly'=>true),
 			array('username, email, password', 'length', 'max'=>255),
-			array('last_login_time, create_time, update_time', 'safe'),
+
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, username, email, password, last_login_time, create_time, create_user_id, update_time, update_user_id', 'safe', 'on'=>'search'),
@@ -55,9 +54,9 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'tblIssues' => array(self::HAS_MANY, 'TblIssue', 'owner_id'),
-			'tblIssues1' => array(self::HAS_MANY, 'TblIssue', 'requester_id'),
-			'tblProjects' => array(self::MANY_MANY, 'TblProject', 'tbl_project_user_assignment(user_id, project_id)'),
+			'ownerIssues' => array(self::HAS_MANY, 'Issue', 'owner_id'),
+			'requesterIssues' => array(self::HAS_MANY, 'Issue', 'requester_id'),
+			'projects' => array(self::MANY_MANY, 'Project', 'tbl_project_user_assignment(user_id, project_id)'),
 		);
 	}
 
