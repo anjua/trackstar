@@ -21,6 +21,8 @@
  */
 class User extends TrackStarActiveRecord
 {
+	public $password_repeat;
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -37,13 +39,28 @@ class User extends TrackStarActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, email, password', 'required'),
+			array('username, email, password, password_repeat', 'required'),
 			array('username, email, password', 'length', 'max'=>255),
+			array('username, email', 'unique'),
+			array('password', 'compare', 'compareAttribute'=>'password_repeat'),
+			array('email', 'email'),
 
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, username, email, password, last_login_time, create_time, create_user_id, update_time, update_user_id', 'safe', 'on'=>'search'),
+			array('id, username, email, password, password_repeat', 'safe', 'on'=>'search'),
 		);
+	}
+
+	public function afterValidate()
+	{
+		parent::afterValidate();
+		if(!$this->hasErrors())
+			$this->password=$this->hashPassword($this->password);
+	}
+
+	public function hashPassword($password)
+	{
+		return md5($password);
 	}
 
 	/**
