@@ -25,19 +25,20 @@ class UserIdentity extends CUserIdentity
 		elseif(!$user->validatePassword($this->password))
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
 		else
+		{
 			$this->_id=$user->id;
 			$this->username=$user->username;
 			$this->setState('lastlogin', date("m/d/y g:i A", strtotime($user->last_login_time)));
 			$user->saveAttributes(array(
-				'last_login_time'=>date("Y-m-d H:i:s", time())
+				'last_login_time'=>date("Y-m-d H:i:s", time()),
 			));
-
-		if(!isset($users[$this->username]))
-			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		elseif($users[$this->username]!==$this->password)
-			$this->errorCode=self::ERROR_PASSWORD_INVALID;
-		else
 			$this->errorCode=self::ERROR_NONE;
-		return !$this->errorCode;
+		}
+		return $this->errorCode=self::ERROR_NONE;
+	}
+
+	public function getId()
+	{
+		return $this->_id;
 	}
 }
