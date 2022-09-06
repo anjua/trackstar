@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'Trackstar Application',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -41,6 +41,9 @@ return array(
 		'authManager'=>array(
 			'class'=>'CDbAuthManager',
 			'connectionID'=>'db',
+			'itemTable'=>'tbl_auth_item',
+			'itemChildTable'=>'tbl_auth_item_child',
+			'assignmentTable'=>'tbl_auth_assignment',
 		),
 
 

@@ -14,13 +14,13 @@ class m220906_074238_create_rbac_tables extends CDbMigration
 		), 'ENGINE=InnoDB');
 
 		$this->createTable('tbl_auth_item_child', array(
-			'parent'=>'vachar(64) NOT NULL',
+			'parent'=>'varchar(64) NOT NULL',
 			'child'=>'varchar(64) NOT NULL',
 			'PRIMARY KEY (`parent`, `child`)',
 		), 'ENGINE=InnoDB');
 
 		$this->addForeignKey('fk_auth_item_child_parent','tbl_auth_item_child','parent', 'tbl_auth_item', 'name', "CASCADE", "CASCADE");
-		$this->addForeignKey('fk_auth_item_child_parent','tbl_auth_item_child','child', 'tbl_auth_item', 'name', "CASCADE", "CASCADE");
+		$this->addForeignKey('fk_auth_item_child_child','tbl_auth_item_child','child', 'tbl_auth_item', 'name', "CASCADE", "CASCADE");
 
 		$this->createTable('tbl_auth_assignment', array(
 			'itemname'=>'varchar(64) NOT NULL',

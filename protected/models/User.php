@@ -58,6 +58,11 @@ class User extends TrackStarActiveRecord
 			$this->password=$this->hashPassword($this->password);
 	}
 
+	public function validatePassword($password)
+	{
+		return $this->hashPassword($password)===$this->password;
+	}
+
 	public function hashPassword($password)
 	{
 		return md5($password);
