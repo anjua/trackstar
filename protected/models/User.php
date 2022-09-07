@@ -51,13 +51,6 @@ class User extends TrackStarActiveRecord
 		);
 	}
 
-	public function afterValidate()
-	{
-		parent::afterValidate();
-		if(!$this->hasErrors())
-			$this->password=$this->hashPassword($this->password);
-	}
-
 	public function validatePassword($password)
 	{
 		return $this->hashPassword($password)===$this->password;
